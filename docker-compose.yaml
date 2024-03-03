@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: my_client_container
+    volumes:
+      - clientvol:/clientdata
+
+volumes:
+  clientvol:
